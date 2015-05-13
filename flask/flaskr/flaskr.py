@@ -1,5 +1,5 @@
 # all the imports
-import sqlite3
+import sqlite3, json, requests,time
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 
@@ -43,8 +43,23 @@ def teardown_request(exception):
 def index():
 	# placeholder for requests 
 	# json 
+
+
+
+    headers = {'MojioAPIToken': '6ae1f07c-6db7-4a49-b458-2a1ffdfdc52e'} 
+    r = requests.get("https://api.moj.io:443/v1/Events/", headers=headers)
+
+    l= r.json()[u'Data'][0]
+    print l
+    location = l['Location']
+    latitude =  l[u'Location'][u'Lat']
+    longitude =  l[u'Location'][u'Lng' ]
+    fuel = u'FuelLevel'
+    j = { u'Lat': latitude, u'Lng' : str(longitude) , u"FuelLevel" : str(l[fuel]) }
+    return j
 	#http://docs.python-requests.org/en/latest/
-    return 'Index Page'
+
+    
 # @app.route('/')
 # def show_entries():
 #     cur = g.db.execute('select title, text from entries order by id desc')
