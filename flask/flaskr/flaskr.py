@@ -41,9 +41,17 @@ def teardown_request(exception):
 
 @app.route('/')
 def index():
-	# placeholder for requests 
-	# json
-    
+    # json 
+    #http://docs.python-requests.org/en/latest/
+    #stat="http://api.mygasfeed.com/stations/radius/34.029511/-118.28482/5/reg/distance/ga2zwdhair.json?callback=?"
+    #r = requests.get(stat)
+    #resp=r.content[2:-1] #Format the data.
+    #authKey={'MojioAPIToken'='5f05a4ea-7c06-4ca6-8ddd-02973245e575'}
+    #print yelp.search('ice cream', '37.7578163,-122.38803')
+    llat=34.029511
+    llong=-118.28482
+    return render_template('hackacar.html',name='Vix',llat=llat,llong=llong)
+
     return "home page! "
 	#http://docs.python-requests.org/en/latest/
 
