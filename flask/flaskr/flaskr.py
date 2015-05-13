@@ -48,9 +48,18 @@ def index():
     #resp=r.content[2:-1] #Format the data.
     #authKey={'MojioAPIToken'='5f05a4ea-7c06-4ca6-8ddd-02973245e575'}
     #print yelp.search('ice cream', '37.7578163,-122.38803')
-    llat=34.029511
-    llong=-118.28482
-    return render_template('hackacar.html',name='Vix',llat=llat,llong=llong)
+    headers = {'MojioAPIToken': '6ae1f07c-6db7-4a49-b458-2a1ffdfdc52e'} 
+    r = requests.get("https://api.moj.io:443/v1/Events/", headers=headers)
+    t = requests.get("https://api.moj.io:443/v1/Trips?limit=10&offset=0&sortBy=StartTime&asc=false&criteria=", headers=headers)
+    l= r.json()[u'Data'][0]
+    start_time = t.json()[u'Data'][0][u'StartTime'] 
+    last_time = t.json()[u'Data'][0][u'LastUpdatedTime']
+    time_difference = datetime.now() - datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%S.%fZ')  
+    location = l['Location']
+    latitude =  l[u'Location'][u'Lat']
+    longitude =  l[u'Location'][u'Lng' ]
+    fuel = u'FuelLevel'
+    return render_template('hackacar.html',name='Vix',llat=latitude,llong=longitude,trip_time=':'.join(str(time_difference).split(':')[:2]),fuel_level=l[fuel])
 
     return "home page! "
 	#http://docs.python-requests.org/en/latest/
