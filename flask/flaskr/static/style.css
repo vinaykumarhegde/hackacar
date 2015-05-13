@@ -1,0 +1,69 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f6f6f6;
+}
+    
+#tagline {
+    color: rgb(149, 165, 166);
+    font-size: 150%;
+    font-style: italic;
+    font-weight: 700;
+}
+
+hr { 
+    border: 1px solid #ccc; 
+    width: 95%; 
+    padding: 0;
+}
+
+#googlemaps { 
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+  opacity: 0.75;
+}
+
+#infobox { 
+    /*background-color: #47a0db; */
+    padding: 20px 40px;
+    color: #fff;
+    z-index: 1;
+  /*  visibility: hidden;*/
+}
+
+.navbar-header { 
+    background-color: #6495ED; 
+    padding: 15px;
+    color: #fff;
+    z-index: 1;
+}
+.centeralign { text-align: center; 
+background: rgb(0, 0, 0);
+z-index: 1;
+}
+
+.box { width: 45%; }
+
+.time {
+    font-size: 400%;
+}
+
+
+footer { 
+    padding: 20px; 
+    background-color: #6495ED; 
+    color: #ccc; 
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
