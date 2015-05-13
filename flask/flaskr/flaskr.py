@@ -42,7 +42,15 @@ def teardown_request(exception):
 @app.route('/')
 def index():
 	# placeholder for requests 
-	# json 
+	# json
+    
+    return "home page! "
+	#http://docs.python-requests.org/en/latest/
+
+@app.route('/json')
+def json():
+    # placeholder for requests 
+    # json 
 
 
 
@@ -56,10 +64,18 @@ def index():
     longitude =  l[u'Location'][u'Lng' ]
     fuel = u'FuelLevel'
     j = { u'Lat': latitude, u'Lng' : str(longitude) , u"FuelLevel" : str(l[fuel]) }
-    return j
-	#http://docs.python-requests.org/en/latest/
+    return flask.jsonify(**j)
+    #http://docs.python-requests.org/en/latest/
 
-    
+
+
+@app.route('/speak',methods=['POST'])
+def speak():
+    # get input of file - wait for file input
+    #Text to speech >> (SERVER) >> sent to the page, 
+    # if yes , ( show something )
+    return "decision is:  "
+    # if no , continue 
 # @app.route('/')
 # def show_entries():
 #     cur = g.db.execute('select title, text from entries order by id desc')
