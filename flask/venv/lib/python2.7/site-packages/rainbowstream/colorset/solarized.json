@@ -1,0 +1,88 @@
+{
+    /* Color config
+    There are 16 basic colors supported :
+        * default
+        * black
+        * red
+        * green
+        * yellow
+        * blue
+        * magenta
+        * cyan
+        * grey
+        * light_red
+        * light_green
+        * light_yellow
+        * light_blue
+        * light_magenta
+        * light_cyan
+        * white
+    and 256 terminal's colors from 0 to 255
+    */
+
+    "DECORATED_NAME" : 64,
+    "CYCLE_COLOR" :[124,32,64,66,130,23],
+    "TWEET" : {
+        "mynick"          : 66,
+        "nick"            : 64,
+        "clock"           : 32,
+        "id"              : 130,
+        "client"          : 23,
+        "favorited"       : 64,
+        "retweet_count"   : 64,
+        "favorite_count"  : 124,
+        "rt"              : 66,
+        "link"            : 23,
+        "hashtag"         : 64,
+        "mytweet"         : 66,
+        "keyword"         : "on_light_green"
+    },
+
+    "NOTIFICATION":{
+        "source_nick"   : 64,
+        "notify"        : 66,
+        "clock"         : 32
+    },
+
+    "MESSAGE" : {
+        "partner"       : 64,
+        "me"            : 64,
+        "partner_frame" : 124,
+        "me_frame"      : 23,
+        "sender"        : 64,
+        "recipient"     : 64,
+        "to"            : 130,
+        "clock"         : 32,
+        "id"            : 124
+    },
+
+    "PROFILE" : {
+        "statuses_count"    : 124,
+        "friends_count"     : 32,
+        "followers_count"   : 130,
+        "nick"              : 64,
+        "profile_image_url" : 23,
+        "description"       : 66,
+        "location"          : 64,
+        "url"               : 23,
+        "clock"             : 32
+    },
+
+    "TREND" : {
+        "url": 23
+    },
+
+    "CAL" : {
+        "days": 64,
+        "today": "light_green"
+    },
+
+    "GROUP" : {
+        "name": 64,
+        "member": 130,
+        "subscriber": 32,
+        "mode": 164,
+        "description": 66,
+        "clock": 32
+    }
+}

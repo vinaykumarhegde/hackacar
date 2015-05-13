@@ -1,0 +1,88 @@
+{
+    /* Color config
+    There are 16 basic colors supported :
+        * default
+        * black
+        * red
+        * green
+        * yellow
+        * blue
+        * magenta
+        * cyan
+        * grey
+        * light_red
+        * light_green
+        * light_yellow
+        * light_blue
+        * light_magenta
+        * light_cyan
+        * white
+    and 256 terminal's colors from 0 to 255
+    */
+
+    "DECORATED_NAME" : 37,
+    "CYCLE_COLOR" :[37,184,202,154,59,230],
+    "TWEET" : {
+        "mynick"          : 202,
+        "nick"            : 37,
+        "clock"           : 184,
+        "id"              : 184,
+        "client"          : 154,
+        "favorited"       : 154,
+        "retweet_count"   : 154,
+        "favorite_count"  : 202,
+        "rt"              : 202,
+        "link"            : 154,
+        "hashtag"         : 37,
+        "mytweet"         : 202,
+        "keyword"         : "on_light_green"
+    },
+
+    "NOTIFICATION":{
+        "source_nick"   : 37,
+        "notify"        : 202,
+        "clock"         : 184
+    },
+
+    "MESSAGE" : {
+        "partner"       : 37,
+        "me"            : 37,
+        "partner_frame" : 154,
+        "me_frame"      : 202,
+        "sender"        : 37,
+        "recipient"     : 37,
+        "to"            : 154,
+        "clock"         : 184,
+        "id"            : 202
+    },
+
+    "PROFILE" : {
+        "statuses_count"    : 202,
+        "friends_count"     : 37,
+        "followers_count"   : 184,
+        "nick"              : 37,
+        "profile_image_url" : 154,
+        "description"       : 230,
+        "location"          : 59,
+        "url"               : 154,
+        "clock"             : 184
+    },
+
+    "TREND" : {
+        "url": 154
+    },
+
+    "CAL" : {
+        "days": 202,
+        "today": "on_light_magenta"
+    },
+
+    "GROUP" : {
+        "name": 37,
+        "member": 184,
+        "subscriber": 37,
+        "mode": 59,
+        "description": 230,
+        "clock": 184
+    }
+}

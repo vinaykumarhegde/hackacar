@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+    Fuel 
+    <script> 
+        print(function(text, id){
+
+            alert("placeholder for printing to an id")
+        });
+
+
+
+        setInterval(function(){
+    $.ajax({ url: "http://localhost:5000/json", success: function(data){
+        //Update your dashboard gauge
+        salesGauge.setValue(data.value);
+    }, dataType: "json"});
+}, 30000);
+    </script> 
+</body>
+</html>
